@@ -8,10 +8,10 @@
 div {
     position: absolute;
     width: 400px;
-    height: 400px;
+    height: 440px;
     left: 50%;
     top: 50%;
-    margin: -200px 0px 0px -200px;
+    margin: -220px 0px 0px -200px;
 }
 
 span {
@@ -26,6 +26,11 @@ span {
     font-size: 400px;
 }
 
+#emj {
+    top: 0;
+}
+
 #val {
     font-size: 40px;
+    bottom: 0;
 }
