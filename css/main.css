@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "EmojiSymbols";
+    src: url('font/EmojiSymbols-Regular.woff') format('woff');
+    text-decoration: none;
+    font-style: normal;
+}
+
+div {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 50%;
+    top: 50%;
+    margin: -200px 0px 0px -200px;
+}
+
+span {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+.emoji {
+    font-family: "EmojiSymbols";
+    font-size: 400px;
+}
+
+#val {
+    font-size: 40px;
+}

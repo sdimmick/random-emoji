@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/main.css">  
+  </head>
+  <body>
+    <div>
+      <span id="emj" class="emoji"></span>
+      <span id="val"></span>
+    </div>
+  </body>
+
+  <script>
+    var min = 127568;
+    var max = 128288;
+
+    var range = max - min;
+    var rand = Math.floor(Math.random() * range + min);
+    
+    var hexString = '&#x' + rand.toString(16) + ';';
+  
+    document.getElementById('emj').innerHTML = hexString;
+    document.getElementById('val').innerHTML = '&amp;#x' + rand.toString(16).toUpperCase() + ';';
+  </script>
+
+</html>
