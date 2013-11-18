@@ -6,16 +6,12 @@
   <body>
     <div>
       <span id="emj" class="emoji"></span>
-      <span id="val"></span>
     </div>
   </body>
-
-  <script src="js/emojilist.js" ></script>
-
+  <script src="js/emojilist.js"></script>
   <script>
     var rand = Math.floor(Math.random() * emojis.length);
     var hexString = emojis[rand];
     document.getElementById('emj').innerHTML = hexString;
   </script>
-
 </html>
