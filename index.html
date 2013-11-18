@@ -10,17 +10,12 @@
     </div>
   </body>
 
-  <script>
-    var min = 127568;
-    var max = 128288;
+  <script src="js/emojilist.js" ></script>
 
-    var range = max - min;
-    var rand = Math.floor(Math.random() * range + min);
-    
-    var hexString = '&#x' + rand.toString(16) + ';';
-  
+  <script>
+    var rand = Math.floor(Math.random() * emojis.length);
+    var hexString = emojis[rand];
     document.getElementById('emj').innerHTML = hexString;
-    document.getElementById('val').innerHTML = '&amp;#x' + rand.toString(16).toUpperCase() + ';';
   </script>
 
 </html>
