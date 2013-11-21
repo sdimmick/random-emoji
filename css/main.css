@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-div {
+div.emoji-container {
     position: absolute;
     width: 400px;
     height: 440px;
@@ -21,6 +21,10 @@ span {
     color: #333;
 }
 
+/*
+ * EmojiSymbols Font (c)blockworks - Kenichi Kaneko
+ * http://emojisymbols.com/
+ */
 .emoji {
     font-family: "EmojiSymbols";
     font-size: 400px;
@@ -33,4 +37,12 @@ span {
 #val {
     font-size: 40px;
     bottom: 0;
+}
+
+#footer {
+    bottom: 0;
+}
+
+#footer h1, #footer h1 a:link, #footer h1 a:visited {
+    color: #333;
 }
