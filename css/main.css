@@ -1,3 +1,7 @@
+/*
+ * EmojiSymbols Font (c)blockworks - Kenichi Kaneko
+ * http://emojisymbols.com/
+ */
 @font-face {
     font-family: "EmojiSymbols";
     src: url('font/EmojiSymbols-Regular.woff') format('woff');
@@ -7,11 +11,11 @@
 
 div.emoji-container {
     position: absolute;
-    width: 400px;
-    height: 440px;
+    width: 200px;
+    height: 220px;
     left: 50%;
     top: 50%;
-    margin: -220px 0px 0px -200px;
+    margin: -110px 0px 0px -100px;
 }
 
 span {
@@ -21,13 +25,9 @@ span {
     color: #333;
 }
 
-/*
- * EmojiSymbols Font (c)blockworks - Kenichi Kaneko
- * http://emojisymbols.com/
- */
 .emoji {
     font-family: "EmojiSymbols";
-    font-size: 400px;
+    font-size: 200px;
 }
 
 #emj {
@@ -41,8 +41,11 @@ span {
 
 #footer {
     bottom: 0;
+    margin-bottom: 10px;
 }
 
 #footer h1, #footer h1 a:link, #footer h1 a:visited {
+    text-align: center;
+    font-size: 16px;
     color: #333;
 }
