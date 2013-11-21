@@ -5,13 +5,23 @@
     font-style: normal;
 }
 
-div {
+#content  {
     position: absolute;
     width: 400px;
-    height: 440px;
+    height: 480px;
     left: 50%;
     top: 50%;
-    margin: -220px 0px 0px -200px;
+    margin: -240px 0px 0px -200px;
+}
+
+#copy-text {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    position: absolute;
+    font-size: 32px;
+    color: #333;
+    top: 0px;
 }
 
 span {
@@ -27,7 +37,7 @@ span {
 }
 
 #emj {
-    top: 0;
+    top: 40px;
 }
 
 #val {
