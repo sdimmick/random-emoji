@@ -28,6 +28,7 @@ span {
 .emoji {
     font-family: "EmojiSymbols";
     font-size: 200px;
+    line-height: 1;
 }
 
 #emj {
@@ -42,6 +43,11 @@ span {
 #footer {
     bottom: 0;
     margin-bottom: 10px;
+}
+
+#footer h1 {
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 #footer h1, #footer h1 a:link, #footer h1 a:visited {

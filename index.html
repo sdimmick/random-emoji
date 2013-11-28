@@ -4,11 +4,14 @@
     <title>Random Emoji</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <link rel="stylesheet" type="text/css" href="css/main.css">  
+    <link rel="stylesheet" type="text/css" href="css/arrows.css">  
     <link rel="stylesheet" type="text/css" href="css/normalize.css">  
   </head>
   <body>
     <div class="emoji-container">
+      <span id="left-arrow" class="arrow arrow-left-disabled"></span>
       <span id="emj" class="emoji"></span>
+      <span id="right-arrow" class="arrow arrow-right"></span>
     </div>
     <span id="footer">
       <h1>
@@ -19,9 +22,40 @@
   </body>
   <script src="js/emojilist.js"></script>
   <script>
-    var rand = Math.floor(Math.random() * emojis.length);
-    var hexString = emojis[rand];
-    document.getElementById('emj').innerHTML = hexString;
+    var history = [];
+
+    var emojiElement = document.getElementById('emj');
+    var rightArrow = document.getElementById('right-arrow');
+    var leftArrow = document.getElementById('left-arrow');
+
+    function next() {
+        var currentEmoji = emojiElement.innerHTML;
+        if (currentEmoji) {
+            history.push(currentEmoji);
+        }
+
+        var rand = Math.floor(Math.random() * emojis.length);
+        var hexString = emojis[rand];
+        emojiElement.innerHTML = hexString;
+
+        if (history.length > 0) {
+            leftArrow.className = 'arrow arrow-left';
+        }
+    }
+
+    function previous() {
+        var hexString = history.pop();
+        if (hexString) {
+            emojiElement.innerHTML = hexString;
+            if (history.length == 0) {
+                leftArrow.className = 'arrow arrow-left-disabled';
+            }
+        } 
+    }
+
+    rightArrow.addEventListener('click', next);
+    leftArrow.addEventListener('click', previous);
+    next();
 
     // google analytics
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -31,4 +65,5 @@
     ga('create', 'UA-45815124-1', 'randomemoji.com');
     ga('send', 'pageview');
   </script>
+  <script src="js/modernizr.js"></script>
 </html>

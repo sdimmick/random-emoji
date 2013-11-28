@@ -1,0 +1,34 @@
+.arrow {
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    top: 80px;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+
+.arrow-right, .arrow-right-disabled {
+    left: 220px;
+    border-left: 30px solid #aaa;
+}
+
+html.no-touch .arrow-right:hover {
+    border-left: 30px solid #333;
+}
+
+html.touch .arrow-right:active {
+    border-left: 30px solid #333;
+}
+
+.arrow-left, .arrow-left-disabled {
+    right: 220px;
+    border-right: 30px solid #aaa;
+}
+
+html.no-touch .arrow-left:hover {
+    border-right: 30px solid #333;
+}
+
+html.touch .arrow-left:active {
+    border-right: 30px solid #333;
+}
