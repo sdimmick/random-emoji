@@ -23,7 +23,7 @@
   </body>
   <script src="js/emojilist.js"></script>
   <script>
-    var history = [];
+    var emojiStack = [];
 
     var emojiElement = document.getElementById('emj');
     var rightArrow = document.getElementById('right-arrow');
@@ -32,23 +32,23 @@
     function next() {
         var currentEmoji = emojiElement.innerHTML;
         if (currentEmoji) {
-            history.push(currentEmoji);
+            emojiStack.push(currentEmoji);
         }
 
         var rand = Math.floor(Math.random() * emojis.length);
         var hexString = emojis[rand];
         emojiElement.innerHTML = hexString;
 
-        if (history.length > 0) {
+        if (emojiStack.length > 0) {
             leftArrow.className = 'arrow arrow-left';
         }
     }
 
     function previous() {
-        var hexString = history.pop();
+        var hexString = emojiStack.pop();
         if (hexString) {
             emojiElement.innerHTML = hexString;
-            if (history.length == 0) {
+            if (emojiStack.length == 0) {
                 leftArrow.className = 'arrow arrow-left-disabled';
             }
         } 
